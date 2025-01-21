@@ -6,6 +6,7 @@ import Man from "./man";
 import { BrowserRouter,Route,Routes ,Link} from "react-router-dom";
 import Home from "./home";
 import Jew from "./jew";
+import Elec from "./elect";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App2() {
@@ -16,16 +17,19 @@ export default function App2() {
         .then((res)=>setproducts(res.data))
         .catch((er)=>console.log('error'))
     })
-//ReduxAPIHub 
+ 
     return(
     <BrowserRouter>
     <Link to="/">Home</Link> &nbsp;
     <Link to="/m">Man</Link>&nbsp;
     <Link to="/j">jew</Link>&nbsp;
+    <Link to="/e">Elec</Link>&nbsp;
     <Routes>
         <Route path="/" element={<Home yy={products}/>}></Route>
         <Route path="/m" element={<Man ll={products}/>}></Route>
         <Route path="/j" element={<Jew oo={products} />}></Route>
+        <Route path="/e" element={<Elec elec={products} />}></Route>
+
     </Routes>
     
     </BrowserRouter>
