@@ -7,6 +7,7 @@ import { BrowserRouter,Route,Routes ,Link} from "react-router-dom";
 import Home from "./home";
 import Jew from "./jew";
 import Elec from "./elect";
+import Women from "./women";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App2() {
@@ -24,11 +25,13 @@ export default function App2() {
     <Link to="/m">Man</Link>&nbsp;
     <Link to="/j">jew</Link>&nbsp;
     <Link to="/e">Elec</Link>&nbsp;
+    <Link to="/w">women</Link>&nbsp;
     <Routes>
         <Route path="/" element={<Home yy={products}/>}></Route>
         <Route path="/m" element={<Man ll={products}/>}></Route>
         <Route path="/j" element={<Jew oo={products} />}></Route>
         <Route path="/e" element={<Elec elec={products} />}></Route>
+        <Route path="/w" element={<Women women={products} />}></Route>
 
     </Routes>
     
