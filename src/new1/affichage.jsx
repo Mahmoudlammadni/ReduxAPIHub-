@@ -14,7 +14,7 @@ export default function Affichage(props) {
               <h5 className="card-title">{props.data.title.slice(1,30)}</h5>
                 
                     <p  className="card-text">{props.data.price}</p>
-                    <p  className="card-text">{props.data.description.slice(1,20)}</p>
+                    <p  className="card-text">{props.data.description.slice(1,40)}</p>
                     <p  className="card-text">{props.data.category}</p>
                     <button className="btn btn-success" onClick={()=>dis(add(props.data))}>to basket</button>
                     </div>

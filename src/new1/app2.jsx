@@ -9,6 +9,7 @@ import Jew from "./jew";
 import Elec from "./elect";
 import Women from "./women";
 import Navbar from "./Nav";
+import Basket from "./basket";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App2() {
@@ -29,6 +30,7 @@ export default function App2() {
         <Route path="/j" element={<Jew oo={products} />}></Route>
         <Route path="/e" element={<Elec elec={products} />}></Route>
         <Route path="/w" element={<Women women={products} />}></Route>
+        <Route path="/b" element={< Basket />}></Route>
       
 
     </Routes>

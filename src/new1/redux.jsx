@@ -10,7 +10,7 @@ const redu_x = (state=initialstate,action)=>{
                 return p.id!==action.payload
             })]}
         default:
-            break;
+            return state 
     }
 }
 export default redu_x

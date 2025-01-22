@@ -17,6 +17,14 @@ export default function Navbar() {
                     <li className="nav-item active">
                         <Link to="/w" className="nav-link active" >women</Link>
                     </li>
+                    <li className="nav-item active">
+                        <Link to="/b" className="nav-link active" style={{ color: "maroon", fontWeight: "bold" }}>Basket</Link>
+                    </li>
+                    <li className="nav-item">
+ 
+</li>
+
+                    
                 </ul>
             </div>
         </nav>
