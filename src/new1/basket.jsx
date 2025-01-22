@@ -1,7 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import Affichage from "./affichage";
+import { delet } from "./action";
+
 export default function Basket() {
     const dat = useSelector(data=>data.panier)
+    const dis = useDispatch()
     return(
         <div className="row">
             {
@@ -18,6 +21,7 @@ export default function Basket() {
                                         <p  className="card-text">{p.price}</p>
                                         <p  className="card-text">{p.description.slice(1,40)}</p>
                                         <p  className="card-text">{p.category}</p>
+                                        <button className="btn btn-danger" onClick={()=>dis(delet(p.id))}>delete</button>
                                         </div>
                                         </div>
                                         </div>

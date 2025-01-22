@@ -4,7 +4,11 @@ const initialstate = {
 const redu_x = (state=initialstate,action)=>{
     switch (action.type) {
         case "add":
-            return {...state,panier:[...state.panier,action.payload]}
+            const target_card = state.panier.find((p)=>p.id===action.payload.id)
+            if (!target_card) {
+                return {...state,panier:[...state.panier,action.payload]}
+            }
+            
         case "delet":
             return {...state,panier:[...state.panier.filter((p)=>{
                 return p.id!==action.payload
