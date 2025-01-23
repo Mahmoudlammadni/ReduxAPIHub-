@@ -2,12 +2,12 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-import Man from "./man";
 import { BrowserRouter,Route,Routes ,Link} from "react-router-dom";
 import Home from "./home";
 import Jew from "./jew";
 import Elec from "./elect";
 import Women from "./women";
+import Man from "./man";
 import Navbar from "./Nav";
 import Basket from "./basket";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,6 +29,7 @@ export default function App2() {
         <Route path="/m" element={<Man ll={products}/>}></Route>
         <Route path="/j" element={<Jew oo={products} />}></Route>
         <Route path="/e" element={<Elec elec={products} />}></Route>
+        <Route path="/m" element={<Man ll={products} />}></Route>
         <Route path="/w" element={<Women women={products} />}></Route>
         <Route path="/b" element={< Basket />}></Route>
       

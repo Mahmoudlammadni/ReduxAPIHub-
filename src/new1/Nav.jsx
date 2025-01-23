@@ -15,6 +15,9 @@ export default function Navbar() {
                         <Link to="/e" className="nav-link active" >Elec</Link>
                     </li>
                     <li className="nav-item active">
+                        <Link to="/m" className="nav-link active" >Man</Link>
+                    </li>
+                    <li className="nav-item active">
                         <Link to="/w" className="nav-link active" >women</Link>
                     </li>
                     <li className="nav-item active">
