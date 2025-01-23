@@ -5,7 +5,14 @@ import { delet } from "./action";
 export default function Basket() {
     const dat = useSelector(data=>data.panier)
     const dis = useDispatch()
+    const totalPrice = dat.reduce((total, i) => total+= i.price, 0);
     return(
+        <>
+             <div className="mb-4">
+        <h4>Total Price: ${totalPrice}</h4> 
+      </div>
+
+        
         <div className="row">
             {
                 dat.map((p,i)=>{
@@ -33,5 +40,6 @@ export default function Basket() {
             }
     
         </div>
+        </>
       )
 }
